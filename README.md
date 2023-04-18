@@ -33,6 +33,8 @@
   - sendline(). là kiểu sau khi trả kiểu dữ liệu sẽ xuống dòng hay enter.
   - sendafter().vd: **sendafter(b'Hello ', biến). thì nó sẽ gửi dữ liệu sau chuỗi kí tự hello.
   - sendlineafter(). vd: **sendlineafter(b'Hello ', biến). thì nó sẽ gửi dữ liệu sau chuỗi kí tự hello sau đấy xuống dòng hay enter.
+  ### lưu ý:
+  - với 1 số lệnh nhập dữ liệu của source code như scanf() , gets() hay read(). thì với scanf() và gets() chúng ta xài sendline() với read() chúng ta nên xài send(). bởi vì cả scanf() và gets() đều nhận dữ liệu cho đến khi có enter hay xuống dòng còn read() thì ko cần vì vậy khi xài sendline() rất dễ bị thừa giữa liệu.
   ## kiểu trả về hay **return 0; bên C**:
   - interactive(). công dụng trả về dữ liệu hay dừng lại trong chương trình.
   ## lệnh chỉ k/l bit.
