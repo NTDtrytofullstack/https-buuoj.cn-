@@ -21,3 +21,32 @@
 - Sau khi đã truy cập sever thành công , ta thu đc Flag như sau : **flag{7dd651f3-23c7-4383-bb86-6981bc3e539e}**.
 - Cùng nhập flag vào trang web để xem có đúng ko nhé : ![image](https://user-images.githubusercontent.com/130078745/232874315-6510133a-a673-4557-afa1-60bbbc0e888a.png)
 - Flag đã đúng : ![image](https://user-images.githubusercontent.com/130078745/232874462-af6767c0-4d2e-46c0-bc38-276195a75348.png)
+---
+# 1 Số câu lệnh cơ bản trong pwntool:
+  ## Lệnh nhận giá trị:
+  - recv() 
+  - recvuntil(). vd: **recvuntil(b'hello ')** thì câu lệnh này sẽ lưu giữ liệu cho đến khi gạp chuỗi kí tự hello.
+  ## lệnh đọc file
+  - process(). vd: process(./ten_file)
+  ## lệnh gửi dữ liệu.
+  - send().
+  - sendline(). là kiểu sau khi trả kiểu dữ liệu sẽ xuống dòng hay enter.
+  - sendafter().vd: **sendafter(b'Hello ', biến). thì nó sẽ gửi dữ liệu sau chuỗi kí tự hello.
+  - sendlineafter(). vd: **sendlineafter(b'Hello ', biến). thì nó sẽ gửi dữ liệu sau chuỗi kí tự hello sau đấy xuống dòng hay enter.
+  ## kiểu trả về hay **return 0; bên C**:
+  - interactive(). công dụng trả về dữ liệu hay dừng lại trong chương trình.
+  ## lệnh chỉ k/l bit.
+  - p64() = 64bit = 8byte.
+  - p32()= 32bit = 4byte.
+  - p16() = 16bit = 2byte.
+  ## lẹnh truy cập sever.
+  - remote('port',host).
+  ## lệnh thực hiện trong môi trường.
+  - process() là chạy trên chương trình.
+  - remote() là lệnh chạy trên sever.
+  ## *Lưu ý**
+  - cũng phải đặt tên 1 biến tạo thành 1 đối tượng để chúng ta thực hiện: ![image](https://user-images.githubusercontent.com/130078745/232883578-8a34bb93-e394-435d-8e9f-3e2ee5f2b968.png)
+
+- cùng xem 1 vài ví dụ: ![image](https://user-images.githubusercontent.com/130078745/232883706-b1a35bd1-2ac8-4633-a3a8-f4b5202fad49.png)
+
+- như hình khi đã đặt tên 1 đối tượng để thực hiện ta cần phải gọi tên đối tương và **.** sau đấy là câu lệnh để có thể chạy chương trình như : **p.cau_lenh()**.
